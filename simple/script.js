@@ -30,3 +30,18 @@ resetBtn.addEventListener('click', () => {
 
 // Initialize the display when the script loads
 updateDisplay();
+
+
+// 5. Keyboard Support (Add this at the end)
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowUp') {
+        count++;
+        updateDisplay();
+    } else if (event.key === 'ArrowDown') {
+        count--;
+        updateDisplay();
+    } else if (event.key === ' ' || event.key === 'Enter') {
+        count = 0;
+        updateDisplay();
+    }
+});
